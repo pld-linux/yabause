@@ -9,15 +9,14 @@ Source0:	http://dl.sourceforge.net/yabause/%{name}-%{version}.tar.gz
 # Source0-md5:	f61c3829b3505691b151fb77d08fd183
 Patch0:		%{name}-desktop.patch
 URL:		http://yabause.sourceforge.net/
+BuildRequires:	OpenGL-devel
+BuildRequires:	OpenGL-glut-devel
 BuildRequires:	SDL-devel
-BuildRequires:	atk-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	cairo-devel
-BuildRequires:	freetype-devel
-BuildRequires:	glut-devel
-BuildRequires:	gtk+2-devel
-BuildRequires:	gtkglext-devel
+BuildRequires:	gtk+2-devel >= 1:2.0
+BuildRequires:	gtkglext-devel >= 1.0
+BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -26,8 +25,8 @@ FreeBSD, GNU/Linux, Mac OS X and Windows. Yabause support booting
 games using Saturn cds or iso files.
 
 %description -l pl
-Yabause jest emulatorem Segi Saturn opartym na licencji GPL. Obecnie
-jest on dostêpny dla FreeBSD, GNU/Linux, Mac OS X i Windows. Yabause
+Yabause jest emulatorem Segi Saturn dostêpnym na licencji GPL. Obecnie
+dzia³a na systemach FreeBSD, GNU/Linux, Mac OS X i Windows. Yabause
 wspiera gry bootowalne u¿ywaj±c plików cds oraz iso.
 
 %prep
@@ -56,5 +55,5 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/%{name}
 %{_desktopdir}/%{name}.desktop
-%{_mandir}/man1/**
+%{_mandir}/man1/*
 %{_pixmapsdir}/%{name}.png

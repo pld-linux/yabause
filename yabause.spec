@@ -1,5 +1,5 @@
 Summary:	A Sega Saturn emulator
-Summary(pl):	Emulator Segi Saturn
+Summary(pl.UTF-8):   Emulator Segi Saturn
 Name:		yabause
 Version:	0.8.0
 Release:	1
@@ -24,10 +24,10 @@ Yabause is a Sega Saturn emulator under GNU GPL. It currently runs on
 FreeBSD, GNU/Linux, Mac OS X and Windows. Yabause support booting
 games using Saturn cds or iso files.
 
-%description -l pl
-Yabause jest emulatorem Segi Saturn dostêpnym na licencji GPL. Obecnie
-dzia³a na systemach FreeBSD, GNU/Linux, Mac OS X i Windows. Yabause
-wspiera gry bootowalne u¿ywaj±c plików cds oraz iso.
+%description -l pl.UTF-8
+Yabause jest emulatorem Segi Saturn dostÄ™pnym na licencji GPL. Obecnie
+dziaÅ‚a na systemach FreeBSD, GNU/Linux, Mac OS X i Windows. Yabause
+wspiera gry bootowalne uÅ¼ywajÄ…c plikÃ³w cds oraz iso.
 
 %prep
 %setup -q -n %{name}

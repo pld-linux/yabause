@@ -1,5 +1,5 @@
 Summary:	A Sega Saturn emulator
-Summary(pl.UTF-8):   Emulator Segi Saturn
+Summary(pl.UTF-8):	Emulator Segi Saturn
 Name:		yabause
 Version:	0.8.0
 Release:	1

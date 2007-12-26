@@ -9,7 +9,7 @@ Source0:	http://dl.sourceforge.net/yabause/%{name}-%{version}.tar.gz
 # Source0-md5:	45d5fc2cc6b7b757b6d2cb97f794d7f8
 Patch0:		%{name}-desktop.patch
 Patch1:		%{name}-limits.patch
-URL:		http://yabause.sourceforge.net/
+URL:		http://yabause.org
 BuildRequires:	OpenGL-devel
 BuildRequires:	OpenGL-glut-devel
 BuildRequires:	SDL-devel

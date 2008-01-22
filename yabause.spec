@@ -1,12 +1,12 @@
 Summary:	A Sega Saturn emulator
 Summary(pl.UTF-8):	Emulator Segi Saturn
 Name:		yabause
-Version:	0.9.2
+Version:	0.9.3
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications/Games
 Source0:	http://dl.sourceforge.net/yabause/%{name}-%{version}.tar.gz
-# Source0-md5:	45d5fc2cc6b7b757b6d2cb97f794d7f8
+# Source0-md5:	92c5222270fd2b9cb61f909e0ecf6c02
 Patch0:		%{name}-desktop.patch
 Patch1:		%{name}-limits.patch
 URL:		http://yabause.org/

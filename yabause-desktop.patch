@@ -1,13 +1,13 @@
---- yabause/src/gtk/yabause.desktop~	2006-12-23 17:07:52.000000000 +0100
-+++ yabause/src/gtk/yabause.desktop	2007-01-19 10:57:59.000000000 +0100
-@@ -4,7 +4,9 @@
+--- yabause-0.9.7/src/gtk/yabause.desktop~	2008-11-27 11:49:59.000000000 +0100
++++ yabause-0.9.7/src/gtk/yabause.desktop	2008-11-27 11:51:08.000000000 +0100
+@@ -2,7 +2,9 @@
  Type=Application
- Name=Yabause
+ Name=Yabause (Gtk port)
  Comment=Sega Saturn emulator
 +Comment[pl]=Emulator Segi Saturn
  TryExec=yabause
  Exec=yabause
- Icon=yabause.png
--Categories=GNOME;GTK;Application;Game;
+ Icon=yabause
+-Categories=GNOME;GTK;Game;
 +Categories=Application;Game;
 +# vi: encoding=utf-8

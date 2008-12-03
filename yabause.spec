@@ -1,16 +1,12 @@
-#
-# TODO:
-# Something wrong with compilation, there are not output files to be installed
-#
 Summary:	A Sega Saturn emulator
 Summary(pl.UTF-8):	Emulator Segi Saturn
 Name:		yabause
-Version:	0.9.7
+Version:	0.9.8
 Release:	0.1
 License:	GPL v2+
 Group:		X11/Applications/Games
 Source0:	http://dl.sourceforge.net/yabause/%{name}-%{version}.tar.gz
-# Source0-md5:	64bfacec4532672e996111dd3e5c2c06
+# Source0-md5:	3649b60399ac416974639b3513361a97
 Patch0:		%{name}-desktop.patch
 URL:		http://yabause.org/
 BuildRequires:	OpenGL-devel
@@ -56,8 +52,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog GOALS README README.LIN
-#%%attr(755,root,root) %{_bindir}/*
-#%%{_datadir}/%{name}
-#%%{_desktopdir}/%{name}.desktop
+%attr(755,root,root) %{_bindir}/*
+%{_desktopdir}/%{name}.desktop
 %{_mandir}/man1/%{name}.*
-#%%{_pixmapsdir}/%{name}.png
+%{_pixmapsdir}/%{name}.png

@@ -1,0 +1,40 @@
+--- yabause-0.9.15/src/runner/CMakeLists.txt.orig	2016-08-19 17:31:13.000000000 +0200
++++ yabause-0.9.15/src/runner/CMakeLists.txt	2024-11-29 21:43:48.901725838 +0100
+@@ -4,15 +4,11 @@ cmake_minimum_required(VERSION 2.8)
+ 
+ yab_port_start()
+ 
+-if ((NOT EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/lodepng/lodepng.h") OR (NOT EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/lodepng/lodepng.cpp"))
+-	return()
+-endif()
+-
+ include_directories(${PORT_INCLUDE_DIRS})
+ 
+ find_package(Threads)
+ 
+ add_executable(yabause-runner yui.cpp)
+-target_link_libraries(yabause-runner yabause ${YABAUSE_LIBRARIES} ${PORT_LIBRARIES} ${CMAKE_THREAD_LIBS_INIT})
++target_link_libraries(yabause-runner yabause ${YABAUSE_LIBRARIES} ${PORT_LIBRARIES} ${CMAKE_THREAD_LIBS_INIT} lodepng)
+ 
+-yab_port_success(yabause-runner)
+\ No newline at end of file
++yab_port_success(yabause-runner)
+--- yabause-0.9.15/src/runner/yui.cpp.orig	2016-08-24 21:37:03.000000000 +0200
++++ yabause-0.9.15/src/runner/yui.cpp	2024-11-29 21:44:04.908305789 +0100
+@@ -36,8 +36,7 @@ extern "C"
+ extern u8 *vdp1backframebuffer;
+ }
+ 
+-#include "lodepng/lodepng.h"
+-#include "lodepng/lodepng.cpp"
++#include <lodepng.h>
+ 
+ #include <string>
+ #include <iostream>
+@@ -1109,4 +1108,4 @@ int main(int argc, char *argv[])
+       std::cout << "Unknown mode argument." << std::endl;
+       return false;
+    }
+-}
+\ Brak znaku nowej linii na koñcu pliku
++}

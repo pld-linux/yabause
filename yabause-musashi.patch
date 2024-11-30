@@ -1,0 +1,15 @@
+--- yabause-0.9.15/src/musashi/m68kdasm.c.orig	2016-08-19 17:31:13.000000000 +0200
++++ yabause-0.9.15/src/musashi/m68kdasm.c	2024-11-30 16:23:36.757737976 +0100
+@@ -231,6 +231,12 @@ static char* g_cpcc[64] =
+ /* =========================== UTILITY FUNCTIONS ========================== */
+ /* ======================================================================== */
+ 
++#if !M68K_SEPARATE_READS
++#define m68k_read_disassembler_8(A) m68k_read_memory_8(A)
++#define m68k_read_disassembler_16(A) m68k_read_memory_16(A)
++#define m68k_read_disassembler_32(A) m68k_read_memory_32(A)
++#endif /* M68K_SEPARATE_READS */
++
+ #define LIMIT_CPU_TYPES(ALLOWED_CPU_TYPES)	\
+ 	if(!(g_cpu_type & ALLOWED_CPU_TYPES))	\
+ 	{										\

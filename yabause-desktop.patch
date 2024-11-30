@@ -1,13 +1,23 @@
---- yabause-0.9.7/src/gtk/yabause.desktop~	2008-11-27 11:49:59.000000000 +0100
-+++ yabause-0.9.7/src/gtk/yabause.desktop	2008-11-27 11:51:08.000000000 +0100
-@@ -2,7 +2,9 @@
+--- yabause-0.9.15/src/gtk/yabause.desktop.in.orig	2016-08-19 17:31:13.000000000 +0200
++++ yabause-0.9.15/src/gtk/yabause.desktop.in	2024-11-29 20:42:16.388396566 +0100
+@@ -2,6 +2,7 @@
  Type=Application
- Name=Yabause (Gtk port)
+-Name=Yabause (Gtk port)
++Name[pl]=Yabause (port Gtk)
  Comment=Sega Saturn emulator
 +Comment[pl]=Emulator Segi Saturn
  TryExec=yabause
- Exec=yabause
+ Exec=@YAB_PORT_NAME@
  Icon=yabause
--Categories=GNOME;GTK;Game;
-+Categories=Application;Game;
-+# vi: encoding=utf-8
+--- yabause-0.9.15/src/qt/yabause.desktop.in.orig	2016-08-19 17:31:13.000000000 +0200
++++ yabause-0.9.15/src/qt/yabause.desktop.in	2024-11-30 19:25:30.311947512 +0100
+@@ -1,7 +1,9 @@
+ [Desktop Entry]
+ Type=Application
+ Name=Yabause (Qt port)
++Name[pl]=Yabause (port Qt)
+ Comment=Sega Saturn emulator
++Comment[pl]=Emulator Segi Saturn
+ TryExec=yabause
+ Exec=@YAB_PORT_NAME@
+ Icon=yabause

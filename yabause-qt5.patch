@@ -1,0 +1,51 @@
+From: Guillaume Duhamel <guillaume.duhamel@gmail.com>
+Origin: upstream, https://github.com/Yabause/yabause/commit/06a816c
+Bug-Debian: https://bugs.debian.org/875242
+Subject: [PATCH] Fix qt 5.11 (#422)
+
+Header fixes for Qt 5.11
+
+--- a/src/qt/ui/UICheatRaw.cpp
++++ b/src/qt/ui/UICheatRaw.cpp
+@@ -20,8 +20,6 @@
+ #include "UIHexInput.h"
+ #include "../QtYabause.h"
+ 
+-#include <QButtonGroup>
+-
+ UICheatRaw::UICheatRaw( QWidget* p )
+ 	: QDialog( p )
+ {
+--- a/src/qt/ui/UICheatRaw.h
++++ b/src/qt/ui/UICheatRaw.h
+@@ -21,7 +21,7 @@
+ 
+ #include "ui_UICheatRaw.h"
+ 
+-class QButtonGroup;
++#include <QButtonGroup>
+ 
+ class UICheatRaw : public QDialog, public Ui::UICheatRaw
+ {
+--- a/src/qt/ui/UICheats.cpp
++++ b/src/qt/ui/UICheats.cpp
+@@ -21,6 +21,8 @@
+ #include "UICheatRaw.h"
+ #include "../CommonDialogs.h"
+ 
++#include <QButtonGroup>
++
+ UICheats::UICheats( QWidget* p )
+ 	: QDialog( p )
+ {
+--- a/src/qt/ui/UIHexInput.h
++++ b/src/qt/ui/UIHexInput.h
+@@ -22,6 +22,8 @@
+ #include "ui_UIHexInput.h"
+ #include "../QtYabause.h"
+ 
++#include <QValidator>
++
+ class HexValidator : public QValidator
+ {
+    Q_OBJECT
